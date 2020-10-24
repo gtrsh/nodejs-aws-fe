@@ -1,0 +1,18 @@
+# Welcome to Serverless!
+
+service: rs-app-serverless
+
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  profile: app-rs-user
+
+plugins:
+  - serverless-finch
+
+custom:
+  client:
+    bucketName: rs-app-manual-fe-deploy
+    distributionFolder: build
